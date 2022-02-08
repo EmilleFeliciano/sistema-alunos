@@ -48,7 +48,10 @@ public class AlunoControle {
      * recebido.
      */
         public static Aluno[] buscarPorNome(String nome) throws Exception{
-            return null; // retorno temporário, falta implementar.
+            if(nome.isEmpty()){
+                return null;
+            }
+            return AlunoDAO.buscarPorNome(nome);
         }
     
     // método estático listarTodos
